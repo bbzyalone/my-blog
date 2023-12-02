@@ -10,3 +10,9 @@ issues: https://github.com/withastro/astro/issues/5711
 ```
 
 需要运行构建或使用新的 sync 命令来生成此模块
+
+## 侧边栏 
+
+```
+https://starlight.astro.build/zh-cn/
+```
