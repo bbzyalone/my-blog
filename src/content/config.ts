@@ -1,5 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 
+//原始模板
 const blog = defineCollection({
 	// Type-check frontmatter using a schema
 	schema: z.object({
@@ -12,4 +13,16 @@ const blog = defineCollection({
 	}),
 });
 
-export const collections = { blog };
+//自定义内容集合
+const myblog = defineCollection({
+	// 使用schema 进行类型检查
+	schema: z.object({
+		title: z.string(), //标题
+		description: z.string(),  //描述
+		pubDate: z.coerce.date(), //创建时间
+		updatedDate: z.coerce.date().optional(), //更新时间
+		heroImage: z.string().optional(), //图片
+	})
+})
+
+export const collections = { blog ,myblog};
