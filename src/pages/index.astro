@@ -3,8 +3,12 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import RefReactiveBase from '../components/vue/2RefReactiveBase.vue'
+import Base from '../components/vue/1Base.vue'
+import Computed from '../components/vue/3Computed.vue';
+import CssStyle from '../components/vue/4Css&Style.vue'
+import SideBarLift from '../components/custom/SideBarLift.vue'
 
-import ToothedToggle from '../components/vue/ToothedToggle.vue'
 ---
 
 <!doctype html>
@@ -14,8 +18,12 @@ import ToothedToggle from '../components/vue/ToothedToggle.vue'
 	</head>
 	<body>
 		<Header title={SITE_TITLE} />
+		<SideBarLift client:load/>
 		<main>
-			<ToothedToggle/>
+			<Base client:load/>
+			<RefReactiveBase client:load/>
+			<Computed client:load/>
+			<CssStyle client:load/>
 		</main>
 		<Footer />
 	</body>

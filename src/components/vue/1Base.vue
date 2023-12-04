@@ -53,17 +53,18 @@
         <!-- 简写 -->
         <a :[attributeName]="url"> 跳转2 </a>
 
-        <div/>
-        <!-- 指令的动态参数 将一个函数绑定到动态的事件名称上   //TODO 无效-->
-        <a v-on:[eventName]="doSomething">跳转3</a>
+        <div></div>
+        <!-- 指令的动态参数 将一个函数绑定到动态的事件名称上 -->
+        <div v-on:[eventName]="message">单击我</div>
         <!-- 简写 -->
-        <a @[eventName]="doSomething">跳转4</a>
-        <div>----------------------------------------------------------------------------------------模板语法结束</div>
+        <a @[eventName]="message">单击我</a>
+        <div>-----------------------------------------------------------------------------模板语法end</div>
     </div>
 </template>
 
 <!-- 通过使用单文件组件 (SFC) 简化 状态和方法的暴露 -->
 <script setup>
+
 const msg = 'Hello world!'
 const rawHtml = '<span> 哈哈哈 </span>'
 const dynamicId = 1
@@ -81,13 +82,14 @@ const formatDate = (date) => {
     console.log('我也是一个方法2', date)
 }
 const attributeName = 'href'
+
 const url = 'https://bbzywkq.com'
 
-function eventName(){
-    console.log('我也是一个方法3')
-}
-function doSomething(){
+const eventName= 'click'
+
+function message(){
     console.log('我也是一个方法4')
+    alert("v-on绑定的单击事件")
 }
 </script>
 
