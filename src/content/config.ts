@@ -9,7 +9,7 @@ const blog = defineCollection({
 		// Transform string to Date object
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
-		heroImage: z.string().optional(),
+		heroImage: z.array(z.string()).optional(),
 	}),
 });
 
@@ -21,8 +21,8 @@ const myblog = defineCollection({
 		description: z.string(),  //描述
 		pubDate: z.coerce.date(), //创建时间
 		updatedDate: z.coerce.date().optional(), //更新时间
-		heroImage: z.string().optional(), //图片
-	})
-})
+		heroImage: z.string().optional()
+	}),
+});
 
 export const collections = { blog ,myblog};
