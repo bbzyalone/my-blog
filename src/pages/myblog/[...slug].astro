@@ -13,10 +13,10 @@ type Props = CollectionEntry<'myblog'>;
 
 const post = Astro.props;
 const { Content ,headings} = await post.render();
-//console.log("标题列表",headings)
-console.log("haha",post.data)
+
+const testarry=['haha','haha'];
 ---
 
-<BlogPost {...post.data}>
+<BlogPost {...post.data} teststr='teststr' testarry={testarry} headings={headings}>
 	<Content />
 </BlogPost>

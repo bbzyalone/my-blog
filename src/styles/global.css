@@ -4,7 +4,7 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
-:root {
+ :root {
 	--accent: #2337ff;
 	--accent-dark: #000d8a;
 	--black: 15, 18, 25;
@@ -44,6 +44,7 @@ body {
 }
 main {
 	width: 720px;
+	width: 500px;
 	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em;

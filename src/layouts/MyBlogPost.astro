@@ -8,9 +8,7 @@ import SideBarLift from '../components/custom/SideBarLift.vue'
 
 type Props = CollectionEntry<'myblog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage,} = Astro.props;
-
-//console.log("标题列表",headings)
+const { title, description, pubDate, updatedDate, heroImage,headings} = Astro.props;
 ---
 
 <html lang="en">
@@ -59,7 +57,8 @@ const { title, description, pubDate, updatedDate, heroImage,} = Astro.props;
 
 	<body>
 		<Header />
-		<SideBarLift client:load/>
+		<!-- 自定vue 列表组件 -->
+		<SideBarLift {headings} client:load/>
 		<main>
 			<article>
 				<div class="hero-image">

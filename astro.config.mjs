@@ -3,8 +3,6 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import vue from "@astrojs/vue";
 
-import tailwind from "@astrojs/tailwind";
-
 // https://astro.build/config
 export default defineConfig({
   site: 'https://example.com',
@@ -15,7 +13,6 @@ export default defineConfig({
   //自定义端点
   vue({
     appEntrypoint: '/src/pages/vue/_app'
-  }),
-  tailwind()
+  })
   ]
 });

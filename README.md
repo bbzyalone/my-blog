@@ -3,7 +3,7 @@
 ```
 import xxx from 'astro:content'; //导入报红问题 
 同步生成模块
-npm/pnpm/yarn run astro sync
+npm run astro sync
 issues: https://github.com/withastro/astro/issues/5711
 需要运行构建或使用新的 sync 命令来生成此模块
 ```
@@ -37,4 +37,10 @@ https://starlight.astro.build/zh-cn/
 ## 组件参数
 ```
 https://docs.astro.build/zh-cn/core-concepts/astro-components/#%E7%BB%84%E4%BB%B6%E5%8F%82%E6%95%B0
+```
+
+
+## Zod文档
+```
+https://github.com/colinhacks/zod/blob/master/README_ZH.md
 ```
