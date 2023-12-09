@@ -44,3 +44,10 @@ https://docs.astro.build/zh-cn/core-concepts/astro-components/#%E7%BB%84%E4%BB%B
 ```
 https://github.com/colinhacks/zod/blob/master/README_ZH.md
 ```
+
+## json 转ts类
+```
+class-transformer
+import {plainToInstance} from 'class-transformer'
+const resultUser: User[]=plainToInstance(User,jsonData);
+```
