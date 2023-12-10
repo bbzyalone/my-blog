@@ -51,3 +51,8 @@ class-transformer
 import {plainToInstance} from 'class-transformer'
 const resultUser: User[]=plainToInstance(User,jsonData);
 ```
+
+## json对象转ts class
+```
+class-transformer
+```
