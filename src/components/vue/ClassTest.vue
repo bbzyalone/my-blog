@@ -40,5 +40,4 @@ const resultUser: User[]=plainToInstance(User,jsonData);
 
 console.log(resultUser)
 
-
 </script>
